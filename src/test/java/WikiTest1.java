@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.Test;
+
 public class WikiTest1 {
   @Test(description ="Validar que las búsquedas en Wikipedia funcionan")
   public void ValidarBusquedaWikipedia() throws Exception {

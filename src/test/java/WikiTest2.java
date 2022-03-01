@@ -22,13 +22,17 @@ public class WikiTest2 {
 	 // Assert.assertTrue(resultsPage.tituloIsVisible(), "El titulo no esta visible");
 	  System.setProperty("webdriver.chrome.driver", "C:/Users/franc/Documents/Drivers web/chromedriver.exe");
 	  WebDriver driver = new ChromeDriver();
+	  System.out.println("Direccionando a Wikipedia");
 	  driver.get("http://wikipedia.org");
+	  System.out.println("Seleccionando botón de búsqueda");
 	  WebElement searchInput = driver.findElement(By.id("searchInput"));
 	  Thread.sleep(2000);
 	  Assert.assertTrue(searchInput.isDisplayed());
+	  System.out.println("Ingresando texto para buscar");
 	  searchInput.sendKeys(searchText);
 	  searchInput.submit();
 	  Thread.sleep(2000);
+	  System.out.println("Seleccionando el título de la busqueda resultante");
 	  WebElement tituloResultado = driver.findElement(By.id("firstHeading"));
 	  System.out.println("Texto encontrado "+ tituloResultado.getText());
 	  WebDriverWait ewait = new WebDriverWait(driver,10);

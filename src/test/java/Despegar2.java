@@ -18,6 +18,7 @@ public class Despegar2 {
 	  driver.get("https://www.despegar.com.ar");
 	  List<WebElement> ListaElementos = driver.findElements(By.cssSelector("ul.header-list-products > li"));
 	  for (WebElement elemento : ListaElementos) {
+		  System.out.println("Seleccionando un botón superior");
 		  WebElement contenidoElemento = elemento.findElement(By.cssSelector("ul.header-list-products > li > a > div"));
 		  //contenidoElemento.click();
 		  System.out.println(elemento.getText());
