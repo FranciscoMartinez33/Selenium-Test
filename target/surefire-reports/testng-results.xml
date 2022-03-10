@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-03-09T19:20:52 ART" name="Suite" finished-at="2022-03-09T19:21:37 ART" duration-ms="45134">
+    <groups>
+    </groups>
+    <test started-at="2022-03-09T19:20:52 ART" name="Test" finished-at="2022-03-09T19:21:37 ART" duration-ms="45134">
+      <class name="WikiTest1">
+        <test-method signature="ValidarBusquedaWikipedia()[pri:0, instance:WikiTest1@358c99f5]" started-at="2022-03-09T19:20:52 ART" name="ValidarBusquedaWikipedia" description="Validar que las búsquedas en Wikipedia funcionan" finished-at="2022-03-09T19:21:37 ART" duration-ms="45048" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidarBusquedaWikipedia -->
+      </class> <!-- WikiTest1 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

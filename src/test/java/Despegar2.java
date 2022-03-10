@@ -1,5 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import java.util.List;
 import org.openqa.selenium.By;
@@ -13,12 +15,14 @@ public class Despegar2 {
 	  System.setProperty("webdriver.chrome.driver", "C:/Users/franc/Documents/Drivers web/chromedriver.exe");
 	  WebDriver driver = new ChromeDriver();
 	  driver.manage().window().maximize();
-      Thread.sleep(1000);
+	  WebDriverWait wait = new WebDriverWait(driver,15);
+	  wait.until(ExpectedConditions.urlContains("data:,"));
       System.out.println("Direccionando a el sitio de Despegar");
 	  driver.get("https://www.despegar.com.ar");
 	  List<WebElement> ListaElementos = driver.findElements(By.cssSelector("ul.header-list-products > li"));
 	  for (WebElement elemento : ListaElementos) {
 		  System.out.println("Seleccionando un botón superior");
+		  wait.until(ExpectedConditions.visibilityOf(elemento));
 		  WebElement contenidoElemento = elemento.findElement(By.cssSelector("ul.header-list-products > li > a > div"));
 		  //contenidoElemento.click();
 		  System.out.println(elemento.getText());

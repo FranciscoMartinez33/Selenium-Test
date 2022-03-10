@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="WikiTest1">
+      <class name="DespegarDriverFactory">
         <methods>
-          <include name="ValidarBusquedaWikipedia"/>
+          <include name="ValidarViajeDespegar"/>
         </methods>
-      </class> <!-- WikiTest1 -->
+      </class> <!-- DespegarDriverFactory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

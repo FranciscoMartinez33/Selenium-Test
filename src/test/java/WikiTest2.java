@@ -26,12 +26,13 @@ public class WikiTest2 {
 	  driver.get("http://wikipedia.org");
 	  System.out.println("Seleccionando botón de búsqueda");
 	  WebElement searchInput = driver.findElement(By.id("searchInput"));
-	  Thread.sleep(2000);
+	  WebDriverWait wait = new WebDriverWait(driver,15);
+	  wait.until(ExpectedConditions.visibilityOf(searchInput));
 	  Assert.assertTrue(searchInput.isDisplayed());
 	  System.out.println("Ingresando texto para buscar");
 	  searchInput.sendKeys(searchText);
 	  searchInput.submit();
-	  Thread.sleep(2000);
+	  wait.until(ExpectedConditions.titleContains(searchText));
 	  System.out.println("Seleccionando el título de la busqueda resultante");
 	  WebElement tituloResultado = driver.findElement(By.id("firstHeading"));
 	  System.out.println("Texto encontrado "+ tituloResultado.getText());
