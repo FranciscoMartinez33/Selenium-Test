@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-09T18:58:02 ART" name="Suite" finished-at="2022-03-09T18:58:27 ART" duration-ms="24910">
+  <suite started-at="2022-03-10T10:11:26 ART" name="Default suite" finished-at="2022-03-10T10:14:06 ART" duration-ms="160170">
     <groups>
     </groups>
-    <test started-at="2022-03-09T18:58:02 ART" name="Test" finished-at="2022-03-09T18:58:27 ART" duration-ms="24910">
-      <class name="WikiTest1">
-        <test-method signature="ValidarBusquedaWikipedia()[pri:0, instance:WikiTest1@636be97c]" started-at="2022-03-09T18:58:02 ART" name="ValidarBusquedaWikipedia" description="Validar que las búsquedas en Wikipedia funcionan" finished-at="2022-03-09T18:58:27 ART" duration-ms="24867" status="PASS">
+    <test started-at="2022-03-10T10:11:26 ART" name="Default test" finished-at="2022-03-10T10:14:06 ART" duration-ms="160170">
+      <class name="DespegarTest3">
+        <test-method signature="ValidarViajesDespegar(java.lang.String)[pri:0, instance:DespegarTest3@39529185]" started-at="2022-03-10T10:11:26 ART" name="ValidarViajesDespegar" description="Validar la reserva de viaje con alojamiento de 3 adultos y un menor con tres destinos diferentes" data-provider="Data Provider Despegar" finished-at="2022-03-10T10:12:22 ART" duration-ms="55665" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Concepcion del Uruguay, Entre Ríos]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidarBusquedaWikipedia -->
-      </class> <!-- WikiTest1 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- ValidarViajesDespegar -->
+        <test-method signature="ValidarViajesDespegar(java.lang.String)[pri:0, instance:DespegarTest3@39529185]" started-at="2022-03-10T10:12:22 ART" name="ValidarViajesDespegar" description="Validar la reserva de viaje con alojamiento de 3 adultos y un menor con tres destinos diferentes" data-provider="Data Provider Despegar" finished-at="2022-03-10T10:13:11 ART" duration-ms="49441" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Buenos Aires, Buenos Aires]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidarViajesDespegar -->
+        <test-method signature="ValidarViajesDespegar(java.lang.String)[pri:0, instance:DespegarTest3@39529185]" started-at="2022-03-10T10:13:11 ART" name="ValidarViajesDespegar" description="Validar la reserva de viaje con alojamiento de 3 adultos y un menor con tres destinos diferentes" data-provider="Data Provider Despegar" finished-at="2022-03-10T10:14:06 ART" duration-ms="54748" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mendoza, Mendoza]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidarViajesDespegar -->
+      </class> <!-- DespegarTest3 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

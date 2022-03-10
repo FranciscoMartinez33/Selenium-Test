@@ -36,6 +36,7 @@ public class DespegarTest3 {
 		  destino.click();
 		  wait.until(ExpectedConditions.elementSelectionStateToBe(destino, false));
 		  destino.sendKeys(searchText);
+		  Thread.sleep(1000);
 		  destino.sendKeys(Keys.CONTROL);
 		  Thread.sleep(1000);
 		  destino.sendKeys(Keys.ENTER);
@@ -46,11 +47,11 @@ public class DespegarTest3 {
 		  fechaIni.click();
 		  System.out.println("Eligiendo fecha de Inicial");
 		  wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("div.sbox5-floating-tooltip.sbox5-floating-tooltip-opened")));
-		  WebElement Inicio = driver.findElement(By.xpath("//*[@class='sbox5-floating-tooltip sbox5-floating-tooltip-opened']//*[@class='sbox5-monthgrid'][@data-month='2022-04']//*[@class='sbox5-monthgrid-datenumber-number'][text()='1']"));
+		  WebElement Inicio = driver.findElement(By.xpath("//*[@class='sbox5-floating-tooltip sbox5-floating-tooltip-opened']//*[@class='sbox5-monthgrid' or @class='sbox5-monthgrid sbox5-compact-view'][@data-month='2022-04']//*[@class='sbox5-monthgrid-datenumber-number'][text()='1']"));
 		  wait.until(ExpectedConditions.elementToBeClickable(Inicio));
 		  Inicio.click();
 		  System.out.println("Eligiendo fecha de salida");
-		  WebElement Salida = driver.findElement(By.xpath("//*[@class='sbox5-floating-tooltip sbox5-floating-tooltip-opened']//*[@class='sbox5-monthgrid'][@data-month='2022-04']//*[@class='sbox5-monthgrid-datenumber-number'][text()='7']"));
+		  WebElement Salida = driver.findElement(By.xpath("//*[@class='sbox5-floating-tooltip sbox5-floating-tooltip-opened']//*[@class='sbox5-monthgrid' or @class='sbox5-monthgrid sbox5-compact-view'][@data-month='2022-04']//*[@class='sbox5-monthgrid-datenumber-number'][text()='7']"));
 		  wait.until(ExpectedConditions.elementToBeClickable(Salida));
 		  Salida.click();
 		  js.executeScript("window.scrollBy(0,250)", "");//Otro schroll

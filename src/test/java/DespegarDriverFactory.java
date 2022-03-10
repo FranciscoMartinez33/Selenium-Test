@@ -1,4 +1,4 @@
-/*import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -16,8 +16,8 @@ public class DespegarDriverFactory {
   @Test(description = "Validar la reserva de viaje con alojamiento de 3 adultos y un menor")
   
   public void ValidarViajeDespegar() throws Exception{
-	 /* WebDriver driver = new ChromeDriver();
-	  DriverFactory.LevantarBrowser(driver, "CHROME", "https://www.despegar.com.ar");
+	  WebDriver driver = null;
+	  driver = DriverFactory.LevantarBrowser(driver, "CHROME", "https://www.despegar.com.ar");
 	  WebDriverWait wait = new WebDriverWait(driver,15);
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
 	  js.executeScript("window.scrollBy(0,250)", "");//La pantalla es chica por lo que tiene que schrollear
@@ -84,6 +84,8 @@ public class DespegarDriverFactory {
 	  WebElement Hotel = driver.findElement(By.xpath("//*[@class='accommodation-name-wrapper']//*[@class='accommodation-name -eva-3-ellipsis']"));
 	  System.out.println("Texto encontrado "+ Hotel.getText());
 	  Assert.assertTrue(Hotel.isDisplayed());
-	  driver.close();*/
+	  driver.close();
+  }
+}
 	 
 	  
