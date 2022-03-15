@@ -1,30 +1,29 @@
 package com.Selenium.Pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
-import org.testng.Reporter;
+import org.openqa.selenium.support.PageFactory;
 
 public class WikiHomePage {
 	WebDriver driver;
 	
 	public WikiHomePage(WebDriver ldriver) {
 		this.driver=ldriver;
+		PageFactory.initElements(driver,this);
 	}
 	@FindBy(id = "searchInput")
-	private WebElement txtCajaBusqueda;
+	private WebElement searchInput;
 	
-	public void IngresarDatoCajaBusqueda(String dato)
+	public boolean searchInputEsVisible() {
+		return this.searchInput.isDisplayed();
+	}
+	
+	public WikiResultsPage searchText(String dato)
 	{
-		Reporter.log("Localizar y comprobar que la caja de búsqueda se muestra");
-		Assert.assertTrue((txtCajaBusqueda.isDisplayed()), "La caja de búsqueda no se visualiza");
-		Reporter.log("Ingresar la palabra Selenium");
-		txtCajaBusqueda.sendKeys(dato);
-		Reporter.log("Presionar Enter");
-		txtCajaBusqueda.sendKeys(Keys.ENTER);
+		this.searchInput.sendKeys(dato);
+		searchInput.submit();
+		return new WikiResultsPage(this.driver);
 		
 	}
 }
